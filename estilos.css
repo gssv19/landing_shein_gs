@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;500;600&display=swap');
 
 body {
-    background-color: #e5e5f7;
+    /* background-color: #e5e5f7;
     opacity: 0.95;
     background-image: radial-gradient(#000684 1px, #6dfef9 1px);
-    background-size: 50px 50px;
+    background-size: 50px 50px; */
+
+    background: url(./img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
     color: #000684;
-    text-shadow: 0px 0px 20px #464545;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -26,7 +30,9 @@ main {
 }
 
 .chicas img {
-    max-width: 75%;
+    /* max-width: 100%; */
+    position: absolute;
+    bottom: 0;
 }
 
 .segundario {
@@ -43,7 +49,8 @@ main {
     font-size: 80px;
     font-weight: bold;
     letter-spacing: 5px;
-    transform: rotate(-5deg)
+    text-shadow: 0px 0px 20px #464545;
+    transform: rotate(-5deg);
 }
 
 .titulo a {
@@ -87,11 +94,15 @@ main {
     }
 
     .chicas img {
-        max-width: 50%;
+        display: none !important;
     }
 }
 
 @media (max-width: 430px) {
+    body {
+        background: rgba(174, 247, 254, 1);
+    }
+
     main {
         margin: 20px;
     }
