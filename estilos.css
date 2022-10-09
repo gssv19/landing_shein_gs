@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;700;900&display=swap');
 
 * {
     margin: 0;
@@ -52,11 +53,17 @@ main {
 }
 
 .titulo h1 {
-    font-size: 80px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     text-shadow: 0px 0px 20px #464545;
     transform: rotate(-5deg);
+    -webkit-text-stroke: 1px #00FFFF;
+}
+
+span.lpt {
+    font-size: 40px;
 }
 
 .titulo a {
@@ -68,10 +75,12 @@ main {
     text-shadow: none;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #464545;
 }
 
 .informacion {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .informacion h2 {
@@ -87,6 +96,7 @@ main {
 
 .enlace p {
     font-size: 25px;
+    font-weight: bold;
 }
 
 .icon {
@@ -102,7 +112,7 @@ main {
     }
 
     .chicas img {
-        display: none !important;
+        display: none;
     }
 }
 
@@ -116,7 +126,7 @@ main {
     }
 
     .logo img {
-       width: 60%;
+       width: 40%;
     }
     
     .chicas img {
@@ -142,23 +152,19 @@ main {
     }   
     
     .enlace p {
-        font-size: 16px;
-    }
-
-    .titulo h1 {
-        font-size: 40px;
+        font-size: 25px;
     }
 
     .informacion h2 {
         text-align: center;
         letter-spacing: 1px;
-        font-size: 20px
+        font-size: 35px
     }
 
     .titulo a {
         display: initial;
         margin-top: 50px;
-        font-size: 20px;
+        font-size: 35px;
     }
 }
 
