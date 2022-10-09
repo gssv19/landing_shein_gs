@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+lord-icon {
+    display: inline !important;
+}
+
 body {
     /* background-color: #e5e5f7;
     opacity: 0.95;
@@ -140,7 +144,8 @@ span.lpt {
     }
 
     .informacion {
-        margin-top: 20%;
+        margin-top: 30%;
+        margin-bottom: 75px;
     }
 
     .enlaces_container {
@@ -152,19 +157,23 @@ span.lpt {
     }   
     
     .enlace p {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .informacion h2 {
         text-align: center;
         letter-spacing: 1px;
-        font-size: 35px
+        font-size: 20px
+    }
+
+    .titulo h1 {
+        font-size: 60px;
     }
 
     .titulo a {
         display: initial;
-        margin-top: 50px;
-        font-size: 35px;
+        margin-top: 0px;
+        font-size: 16px;
     }
 }
 
