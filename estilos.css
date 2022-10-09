@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;500;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     /* background-color: #e5e5f7;
     opacity: 0.95;
@@ -8,9 +14,8 @@ body {
     background-size: 50px 50px; */
 
     background: url(./img/fondo.png);
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
-
     color: #000684;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
@@ -31,6 +36,7 @@ main {
 
 .chicas img {
     /* max-width: 100%; */
+    width: 40%;
     position: absolute;
     bottom: 0;
 }
@@ -54,6 +60,8 @@ main {
 }
 
 .titulo a {
+    position: relative;
+    top: 60px;
     text-decoration: none;
     background: #FFFF00;
     padding: 20px;
@@ -63,7 +71,7 @@ main {
 }
 
 .informacion {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .informacion h2 {
@@ -121,6 +129,10 @@ main {
         gap: 0px;
     }
 
+    .informacion {
+        margin-top: 20%;
+    }
+
     .enlaces_container {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -144,9 +156,9 @@ main {
     }
 
     .titulo a {
-        display: block;
+        display: initial;
         margin-top: 50px;
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 
