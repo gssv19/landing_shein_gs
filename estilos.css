@@ -76,7 +76,9 @@ span.lpt {
     font-size: 25px;
     font-weight: bold;
     font-family: 'Poppins';
-    letter-spacing: 15px;
+    letter-spacing: 10px;
+    margin: auto;
+    max-width: 80%;
 }
 
 .titulo a {
@@ -93,8 +95,8 @@ span.lpt {
 
 .informacion h2 {
     text-align: center;
-    letter-spacing: 5px;
-    font-size: 40px;
+    letter-spacing: 4px;
+    font-size: 45px;
 }
 
 .enlaces_container {
@@ -138,7 +140,12 @@ span.lpt {
 
     .titulo .contacto {
         font-size: 25px;
-        letter-spacing: 10px;
+        letter-spacing: 6px;
+    }
+
+    .informacion h2 {
+        letter-spacing: 5px;
+        font-size: 35px;
     }
 
     .informacion {
@@ -189,7 +196,7 @@ span.lpt {
     .informacion h2 {
         text-align: center;
         letter-spacing: 1px;
-        font-size: 20px
+        font-size: 25px
     }
 
     .titulo h1 {
@@ -201,7 +208,7 @@ span.lpt {
     }
 
     .titulo .contacto {
-        font-size: 22px;
+        font-size: 20px;
         letter-spacing: 0px;
     }
 
