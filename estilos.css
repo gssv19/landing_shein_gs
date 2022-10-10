@@ -32,7 +32,7 @@ main {
 }
 
 .logo img {
-    filter: drop-shadow(0 0px 30px rgba(0, 6, 130, 0.7));
+    /* filter: drop-shadow(0 0px 30px rgba(0, 6, 130, 0.7)); */
     width: 30%;
 }
 
@@ -219,4 +219,37 @@ span.lpt {
     }
 }
 
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+    .titulo h1 {
+        font-size: 45px;
+        line-height: 70px;
+    }
+
+    .titulo .contacto {
+        font-size: 16px;
+    }
+
+    .titulo a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .titulo .contacto {
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+
+    .titulo a {
+        font-size: 10px;
+    }
+
+    .btn_fig_whatsapp {
+        padding: 6px;
+    }
+
+    .informacion h2 {
+        font-size: 17px;
+    }
+}
