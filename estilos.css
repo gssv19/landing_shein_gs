@@ -122,8 +122,93 @@ span.lpt {
     letter-spacing: 1px;
 }
 
-/* MEDIA QUERIES */
+/* MODAL */
+.ventana{
+    background-color:#FFF;
+    width:50%;
+    height: auto;   
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+}
 
+.modal{
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+    z-index: 15;
+}
+
+#IrVentanaFlotante.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.close_modal {
+    text-decoration: none;
+    right: 20px;
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000684;
+}
+
+.ventana a.close_modal {
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ventana h2 {
+    margin: 20px 0;
+}
+
+.ventana p {
+    margin: 0px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ventana a.btn_modal_contacto {
+    text-decoration: none;
+    background: #03bb03;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    left: 50%;
+    cursor: pointer;
+}
+
+a.btn_trespasos {
+    text-decoration: none;
+    position: absolute;
+    top: 50px;
+    left: 30%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 20px;
+    background: #000684;
+    color: #fff;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 820px) {
     lord-icon {
         display: inline !important;
@@ -151,6 +236,13 @@ span.lpt {
     .informacion {
         margin-top: 50px;
     }
+
+    a.btn_trespasos {
+        top: 0px;
+        left: 36%;
+        font-size: 20px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 430px) {
@@ -160,6 +252,10 @@ span.lpt {
 
     main {
         margin: 20px;
+    }
+
+    .logo {
+        margin-top: 50px;
     }
 
     .logo img {
@@ -217,6 +313,26 @@ span.lpt {
         margin-top: 0px;
         font-size: 16px;
     }
+
+    .ventana {
+        width: 80%;
+    }
+
+    .ventana h2,
+    .ventana p {
+        font-size: 18px;
+    }
+
+    .ventana a.btn_modal_contacto {
+        width: 100%;
+    }
+
+    a.btn_trespasos {
+        top: 0px;
+        left: 31%;
+        font-size: 15px;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -231,6 +347,20 @@ span.lpt {
 
     .titulo a {
         font-size: 12px;
+    }
+
+    .ventana h2,
+    .ventana p {
+        font-size: 15px;
+    }
+
+    .ventana a.btn_modal_contacto {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    a.btn_trespasos {
+        left: 28%;
     }
 }
 
@@ -251,5 +381,13 @@ span.lpt {
 
     .informacion h2 {
         font-size: 17px;
+    }
+
+    a.btn_trespasos {
+        left: 18%;
+    }
+
+    a.btn_trespasos {
+        left: 28%;
     }
 }
