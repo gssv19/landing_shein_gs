@@ -1,393 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;900&family=Source+Sans+Pro:wght@400;700;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    /* background-color: #e5e5f7;
-    opacity: 0.95;
-    background-image: radial-gradient(#000684 1px, #6dfef9 1px);
-    background-size: 50px 50px; */
-
-    background: url(./img/fondo.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-    color: #000684;
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Barlow Semi Condensed', sans-serif;
+/* BODY */
+div.container img {
+    min-width: 100%;
+    max-width: 100%;
 }
 
-main {
-    margin: 50px;
+.img_1366,
+.img_960,
+.img_480,
+.img_360 {
+    display: none;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.logo img {
-    /* filter: drop-shadow(0 0px 30px rgba(0, 6, 130, 0.7)); */
-    width: 30%;
-}
-
-.chicas img {
-    /* max-width: 100%; */
-    width: 40%;
-    position: absolute;
+/* FOOTER */
+footer {
+    position: fixed;
     bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    padding: 40px 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
 }
 
-.segundario {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
+footer {
+    /* background: #40bfcd; */
+    background: #8f6cc2;
+    padding: 10px 100px;
+    max-width: 100%;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.titulo {
-    text-align: center;
-}
-
-.titulo h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    letter-spacing: 0px;
-    line-height: 85px;
-    text-shadow: 0px 0px 20px #464545;
-    /* transform: rotate(-5deg); */
-    -webkit-text-stroke: 1px #00FFFF;
-}
-
-span.lpt {
-    font-size: 40px;
-}
-
-.titulo .contacto {
+footer .navigation_items {
     position: relative;
-    top: 60px;
-    background: #FFFF00;
-    padding: 20px;
+    display: flex;
+}
+
+footer .navigation_items li {
+    list-style: none;
+    margin: 10px;
+}
+
+footer .navigation_items li a {
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #FFF;
     font-size: 25px;
-    font-weight: bold;
-    font-family: 'Poppins';
-    letter-spacing: 10px;
-    margin: auto;
-    max-width: 80%;
-}
-
-.titulo a {
-    text-decoration: none;
-    padding: 20px;
-    text-shadow: none;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.informacion {
-    margin-top: 120px;
-}
-
-.informacion h2 {
-    text-align: center;
-    letter-spacing: 4px;
-    font-size: 45px;
-}
-
-.enlaces_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-}
-
-.enlace p {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.icon {
-    font-size: 100px;
-}
-
-.btn_fig_whatsapp {
-    padding: 10px;
-    color: #000684;
-    background: #04f05d;
-    font-family: 'Montserrat';
-    letter-spacing: 1px;
-}
-
-/* MODAL */
-.ventana{
-    background-color:#FFF;
-    width:50%;
-    height: auto;   
-    padding: 10px 20px;
-    margin: 20% auto;
-    position: relative;
-}
-
-.modal{
-    height: 100vh;
-    background-color: rgba(0,0,0,.8);
-    position:fixed;
-    right:0;
-    bottom:0;
-    left:0;
-    opacity:0;
-    pointer-events:none;
-    transition: all 1s;
-    z-index: 15;
-}
-
-#IrVentanaFlotante.active{
-    opacity:1;
-    pointer-events:auto;
-}
-
-.close_modal {
-    text-decoration: none;
-    right: 20px;
-    position: absolute;
-    top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000684;
-}
-
-.ventana a.close_modal {
-    text-decoration: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.ventana h2 {
-    margin: 20px 0;
-}
-
-.ventana p {
-    margin: 0px 20px 20px 20px;
-    font-size: 20px;
     font-weight: 500;
 }
 
-.ventana a.btn_modal_contacto {
-    text-decoration: none;
-    background: #03bb03;
-    color: #fff;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    text-align: center;
-    margin: auto;
+footer .navigation_items li a:hover {
+    color: var(--color_amarillo);
+}
+
+/* WhatsApp */
+.btn_w {
     width: 50%;
-    left: 50%;
-    cursor: pointer;
+    right: 0;
+    bottom: 85px;
+    display: block !important;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
 }
 
-a.btn_trespasos {
+a.btn-whatsapp {
     text-decoration: none;
-    position: absolute;
-    top: 50px;
-    left: 30%;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 20px;
-    background: #000684;
     color: #fff;
+    cursor: pointer;
+    border-radius: 10px !important;
+    padding: 15px;
+    background: #00bc00;
+    font-size: 25px;
+    font-weight: bold;
+}
+a.btn-whatsapp:hover{
+    border-radius: 10px !important;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(7,94,84,1); 
+    -moz-box-shadow: 0px 0px 15px 0px rgba(7,94,84,1);
+    box-shadow: 0px 0px 15px 0px rgba(7,94,84,1);
+    transition-duration: 1s;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 820px) {
-    lord-icon {
-        display: inline !important;
+@media (max-width: 1440px) {
+    .img_1366 {
+        display: block;
     }
 
-    .container {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .img_1920,
+    .img_960,
+    .img_480,
+    .img_360 {
+        display: none;
+    }
+}
+
+@media (max-width: 1366px) {
+    .img_1366 {
+        display: block;
     }
 
-    .chicas img {
+    .img_1920,
+    .img_960,
+    .img_480,
+    .img_360 {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .img_960 {
+        display: block;
+    }
+
+    .img_1920,
+    .img_1366,
+    .img_480,
+    .img_360 {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .img_960 {
+        display: block;
+    }
+
+    .img_1920,
+    .img_1366,
+    .img_480,
+    .img_360 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .img_480 {
+        display: block;
+    }
+
+    .img_1920,
+    .img_1366,
+    .img_960,
+    .img_360 {
         display: none;
     }
 
-    .titulo .contacto {
-        font-size: 25px;
-        letter-spacing: 6px;
-    }
-
-    .informacion h2 {
-        letter-spacing: 5px;
-        font-size: 35px;
-    }
-
-    .informacion {
-        margin-top: 50px;
-    }
-
-    a.btn_trespasos {
-        top: 0px;
-        left: 36%;
-        font-size: 20px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 430px) {
-    body {
-        background: rgba(174, 247, 254, 1);
-    }
-
-    main {
-        margin: 20px;
-    }
-
-    .logo {
-        margin-top: 50px;
-    }
-
-    .logo img {
-       width: 40%;
-    }
-    
-    .chicas img {
-        display: none;
-    }
-
-    .segundario {
-        display: grid;
-        grid-template-rows: 1fr;
-        gap: 0px;
-    }
-
-    .informacion {
-        margin-top: 30%;
-        margin-bottom: 75px;
-    }
-
-    .enlaces_container {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .icon {
-        font-size: 30px;
-    }   
-    
-    .enlace p {
-        font-size: 18px;
-    }
-
-    .informacion h2 {
-        text-align: center;
-        letter-spacing: 1px;
-        font-size: 25px
-    }
-
-    .titulo h1 {
-        font-size: 50px;
-    }
-    
-    span.lpt {
-        font-size: 30px;
-    }
-
-    .titulo .contacto {
-        font-size: 20px;
-        letter-spacing: 0px;
-    }
-
-    .titulo a {
-        display: initial;
-        margin-top: 0px;
-        font-size: 16px;
-    }
-
-    .ventana {
-        width: 80%;
-    }
-
-    .ventana h2,
-    .ventana p {
-        font-size: 18px;
-    }
-
-    .ventana a.btn_modal_contacto {
+    .btn_w {
         width: 100%;
+        left: 0;
     }
 
-    a.btn_trespasos {
-        top: 0px;
-        left: 31%;
+    a.btn-whatsapp {
         font-size: 15px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 375px) {
-    .titulo h1 {
-        font-size: 45px;
-        line-height: 70px;
-    }
-
-    .titulo .contacto {
-        font-size: 16px;
-    }
-
-    .titulo a {
-        font-size: 12px;
-    }
-
-    .ventana h2,
-    .ventana p {
-        font-size: 15px;
-    }
-
-    .ventana a.btn_modal_contacto {
-        font-size: 15px;
-        width: 100%;
-    }
-
-    a.btn_trespasos {
-        left: 28%;
     }
 }
 
 @media (max-width: 320px) {
-    .titulo .contacto {
-        padding: 10px;
-        font-size: 15px;
-        letter-spacing: 0px;
+    .img_360 {
+        display: block;
     }
 
-    .titulo a {
-        font-size: 10px;
-    }
-
-    .btn_fig_whatsapp {
-        padding: 6px;
-    }
-
-    .informacion h2 {
-        font-size: 17px;
-    }
-
-    a.btn_trespasos {
-        left: 18%;
-    }
-
-    a.btn_trespasos {
-        left: 28%;
+    .img_1920,
+    .img_1366,
+    .img_480,
+    .img_960 {
+        display: none;
     }
 }
